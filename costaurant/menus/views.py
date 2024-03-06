@@ -10,3 +10,6 @@ def index(request): #파라미터로 request를 받으면 아래의 Response로 
         content_type= 'text/html',
         status= 200,
     )
+
+def detail(request, menu):
+    return render(request= request, template_name = 'menus/detail.html')

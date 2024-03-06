@@ -20,7 +20,14 @@ def index(request):
     return render(request, 'foods/index.html', context = context) #렌더함수에 특정 값을 dict형태로 보내서 사용할 수 있다.
 
 def food_detail(request, food):
-    context = {
-        'name' : food
-    }
+    context = dict()
+    if food == "chicken":
+        context['name'] = '코빠닭'
+        context['description'] = "코빠닭은 맛있어요"
+        context['price'] = 10000
+        context["img_path"] = "foods/images/chicken.jpg"        
     return render(request, 'foods/detail.html', context = context)
+
+
+def detail(request, menu):
+    return render(request, 'foods/detial.html') 
