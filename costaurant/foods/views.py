@@ -28,6 +28,3 @@ def food_detail(request, food):
         context["img_path"] = "foods/images/chicken.jpg"        
     return render(request, 'foods/detail.html', context = context)
 
-
-def detail(request, menu):
-    return render(request, 'foods/detial.html') 
